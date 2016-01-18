@@ -8,7 +8,8 @@ public class MainActivity extends AppCompatActivity {
 
     AutoCompleteTextView textView;
 //    ArrayAdapter<String> mAdapter;
-    MyArrayAdapter mAdapter;
+//    MyArrayAdapter mAdapter;
+    MyAdapter mAdapter;
 
     int[] IDS = {R.drawable.gallery_photo_1,
             R.drawable.gallery_photo_2,
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textView = (AutoCompleteTextView)findViewById(R.id.autoCompleteTextView);
-        mAdapter = new MyArrayAdapter(this);
+        mAdapter = new MyAdapter();
         textView.setAdapter(mAdapter);
 
         initData();
